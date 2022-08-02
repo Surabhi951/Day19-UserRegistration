@@ -20,4 +20,14 @@ public class UserRegistrationRegex {
             System.out.println("It is not a valid name");
         }
     }
+
+    public void checkEmail(String email) {
+        boolean isMatched = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.]+$").matcher(email).matches();
+        if(isMatched){
+            System.out.println("It is valid email");
+        }
+        else{
+            System.out.println("It is not a valid email");
+        }
+    }
 }
