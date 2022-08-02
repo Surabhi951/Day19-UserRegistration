@@ -12,5 +12,9 @@ public class UserRegistrationMain {
         String lastName = scanner.next();
         regex.checkLastName(lastName);
 
+        System.out.println("Enter email");
+        String email = scanner.next();
+        regex.checkEmail(email);
+
     }
 }
