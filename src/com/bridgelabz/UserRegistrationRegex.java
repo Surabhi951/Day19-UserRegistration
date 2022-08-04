@@ -11,18 +11,22 @@ public class UserRegistrationRegex {
         System.out.println("Enter first name");
         String firstName = sc.next();
         userRegistrationRegex.checkFirstName(firstName);
-        System.out.println();
 
         System.out.println("Enter last name");
         String lastName = sc.next();
         userRegistrationRegex.checkLastName(lastName);
 
         System.out.println("Enter email");
-        String checkEmail = sc.next();
-        userRegistrationRegex.checkEmail(checkEmail);
+        String email = sc.next();
+        userRegistrationRegex.checkEmail(email);
+
+        System.out.println("Enter mobile number");
+        sc.nextLine();
+        String mobileNo = sc.nextLine();
+        userRegistrationRegex.checkMobileNo(mobileNo);
     }
 
-    public void checkFirstName (String firstName){
+    public void checkFirstName(String firstName) {
         Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z]{2,}");
         Matcher match = pattern.matcher(firstName);
         if (match.matches())
@@ -31,7 +35,7 @@ public class UserRegistrationRegex {
             System.out.println("First name is InValid");
     }
 
-    public void checkLastName (String lastName){
+    public void checkLastName(String lastName) {
         Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z]{2,}");
         Matcher match = pattern.matcher(lastName);
         if (match.matches())
@@ -40,7 +44,7 @@ public class UserRegistrationRegex {
             System.out.println("Last name is InValid");
     }
 
-    public void checkEmail(String email){
+    public void checkEmail(String email) {
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2})*$");
         Matcher match = pattern.matcher(email);
         if (match.matches())
@@ -49,5 +53,13 @@ public class UserRegistrationRegex {
             System.out.println("Email is InValid");
     }
 
+    public void checkMobileNo(String mobileNo) {
+        Pattern pattern = Pattern.compile("^[\\d]{2}\\s[\\d]{10}$");
+        Matcher match = pattern.matcher(mobileNo);
+        if (match.matches())
+            System.out.println("Mobile number is Valid");
+        else
+            System.out.println("Mobile number is InValid");
+    }
 }
 
