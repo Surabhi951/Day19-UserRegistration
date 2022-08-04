@@ -40,6 +40,12 @@ public class UserRegistrationRegex {
         System.out.println("Enter exactly one special character in password");
         String passwordRule4 = sc.next();
         userRegistrationRegex.checkPasswordRule4(passwordRule4);
+
+        System.out.println("Enter email sample");
+        String validEmail = sc.next();
+        userRegistrationRegex.validEmailSample(validEmail);
+
+
     }
 
     public void checkFirstName(String firstName) {
@@ -113,5 +119,15 @@ public class UserRegistrationRegex {
         else
             System.out.println("Password must has exactly one special character");
     }
+
+    public void validEmailSample(String validEmail) {
+        Pattern pattern = Pattern.compile("^(?!.*@.*@)[a-z+_-]+(.[a-z0-9])*@[a-z0-9]+(.[a-z])*.[a-z]{2,}$");
+        Matcher match = pattern.matcher(validEmail);
+        if (match.matches())
+            System.out.println("Valid");
+        else
+            System.out.println("InValid");
+    }
+
 }
 
