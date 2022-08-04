@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistrationRegex {
+
     public static void main(String[] args) {
         UserRegistrationRegex userRegistrationRegex = new UserRegistrationRegex();
         Scanner sc = new Scanner(System.in);
@@ -16,6 +17,13 @@ public class UserRegistrationRegex {
         System.out.println("Enter last name");
         String lastName = sc.next();
         userRegistrationRegex.checkLastName(lastName);
+
+     public static void main(String[] args) {
+        UserRegistrationRegex userRegistrationRegex = new UserRegistrationRegex();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first name");
+        String firstName = sc.next();
+        userRegistrationRegex.checkFirstName(firstName);
     }
 
     public void checkFirstName(String firstName){
