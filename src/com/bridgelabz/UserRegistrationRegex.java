@@ -11,7 +11,7 @@ public class UserRegistrationRegex {
         System.out.println("Enter first name");
         String firstName = sc.next();
         userRegistrationRegex.checkFirstName(firstName);
-
+        System.out.println();
 
         System.out.println("Enter last name");
         String lastName = sc.next();
